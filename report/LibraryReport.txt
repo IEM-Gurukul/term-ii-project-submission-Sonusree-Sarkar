@@ -1,0 +1,51 @@
+LIBRARY MANAGEMENT SYSTEM REPORT
+--------------------------------
+
+1. Project Overview
+-------------------
+The Library Management System is a console-based Java application designed to manage library operations. 
+Features include adding users, issuing books, returning books, and viewing transaction history.
+
+2. Classes Description
+----------------------
+1. User Class
+   - Stores user information (ID, name, etc.)
+   - Can view issued books and history
+
+2. Admin Class
+   - Can add or remove books
+   - Can view all transactions
+
+3. Transaction Class (Abstract)
+   - Parent class for IssueTransaction and ReturnTransaction
+   - Stores common attributes: bookName, userName, date
+
+4. IssueTransaction Class
+   - Records book issue operations
+   - Stores due date information
+
+5. ReturnTransaction Class
+   - Records book return operations
+   - Can calculate overdue fine if implemented
+
+6. LibraryService Class
+   - Manages users, books, and transactions
+   - Provides functions to issue, return, and list books
+
+3. Sample Output
+----------------
+Example of program execution:
+
+> Adding user: Sonusree Sarkar  
+> Adding book: Java Programming  
+> Issuing book: Java Programming to Sonusree Sarkar  
+> Book issued successfully.  
+> Currently Issued Books:  
+> - Java Programming, User: Sonusree Sarkar  
+
+4. Enhancements
+---------------
+- Add overdue fine calculation
+- Search books by title or author
+- Add GUI interface
+- Save data to file or database
