@@ -1,0 +1,42 @@
+Library Management System - UML (Text Form)
+
+Classes:
+
+1. Book
+- id : int
+- title : String
+- available : boolean
++ issueBook()
++ returnBook()
+
+2. User
+- id : int
+- name : String
++ showRole()
+
+3. Admin (inherits User)
++ showRole()
+
+4. Transaction (abstract)
+- book : Book
+- user : User
++ execute()
+
+5. IssueTransaction (inherits Transaction)
++ execute()
+
+6. ReturnTransaction (inherits Transaction)
+- issueDate : LocalDate
++ execute()
+
+7. LibraryService
+- books : List<Book>
++ addBook()
++ searchBook()
++ displayBooks()
+
+Relationships:
+- Admin → User (Inheritance)
+- IssueTransaction → Transaction (Inheritance)
+- ReturnTransaction → Transaction (Inheritance)
+- LibraryService → Book (Association)
